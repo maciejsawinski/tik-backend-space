@@ -1,0 +1,24 @@
+{
+  "name": "tik-backend-space",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Maciej Sawiński <macsawinski@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bcryptjs": "^2.4.3",
+    "deta": "^1.0.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "fast-xml-parser": "^4.0.2",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,21 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: tik-backend
+    src: ./
+    engine: nodejs16
+    primary: true
+    public_routes:
+      - "/*"
+    presets:
+      env:
+        - name: PROJECT_KEY
+          default: "please input your data key"
+        - name: GOOGLE_API_KEY
+          default: "please input your data key"
+    actions:
+      - id: "update"
+        name: "Update"
+        description: "Updates destinations and alerts"
+        trigger: "schedule"
+        default_interval: "1 hour"
