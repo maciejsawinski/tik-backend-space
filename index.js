@@ -17,9 +17,12 @@ if (process.env.DETA_RUNTIME !== "true") {
   app.get("/crontest", async (req, res) => {
     await update();
 
-    res.status(200).send("cron test");
+    res.status(200).send("cron test ok");
   });
 }
+
+// middlewares
+app.use(express.json());
 
 // deta scheduled actions
 app.post("/__space/v0/actions", async (req, res) => {
@@ -31,9 +34,6 @@ app.post("/__space/v0/actions", async (req, res) => {
 
   res.status(200).send("ok");
 });
-
-// middlewares
-app.use(express.json());
 
 app.use("/api/auth", authRouter);
 app.use("/api/config", configRouter);
